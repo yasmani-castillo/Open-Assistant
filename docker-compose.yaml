@@ -123,6 +123,7 @@ services:
       - EMAIL_FROM=info@example.com
       - NEXTAUTH_URL=http://localhost:3000
       - DEBUG_LOGIN=true
+      - INFERENCE_SERVER_HOST=http://inference-server:8000
       - NEXT_PUBLIC_CLOUDFARE_CAPTCHA_SITE_KEY=1x00000000000000000000AA
       - CLOUDFLARE_CAPTCHA_SECRET_KEY=1x0000000000000000000000000000000AA
       - NEXT_PUBLIC_ENABLE_EMAIL_SIGNIN_CAPTCHA=true
@@ -163,6 +164,7 @@ services:
       - "REDIS_HOST=redis"
       - POSTGRES_HOST=inference-db
       - POSTGRES_DB=oasst_inference
+      - DEBUG_API_KEYS=["0000"]
     volumes:
       - "./oasst-shared:/opt/inference/lib/oasst-shared"
       - "./inference/server:/opt/inference/server"
